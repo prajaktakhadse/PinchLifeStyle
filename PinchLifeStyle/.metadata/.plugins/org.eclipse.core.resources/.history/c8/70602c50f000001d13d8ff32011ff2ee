@@ -1,0 +1,13 @@
+package com.bank.service;
+
+import com.bank.DTO.BankUserDTO;
+import com.bank.globalExceptionHandler.AccountNotFound;
+import com.bank.model.Bank;
+import com.bank.model.Transaction;
+
+public interface BankUserService {
+	Bank saveBankUser(Bank d1);
+	String creditAmount(String accNum,int amount) throws AccountNotFound;
+	
+	String debitAmount(String accNum, int amount);
+}

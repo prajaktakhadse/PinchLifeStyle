@@ -1,0 +1,11 @@
+1657523637634	Rename package 'com.bank.entity'
+1657524944102	Rename type 'BankUser'
+1657525349787	Rename type 'BankUserDao'
+1657525362837	Rename type 'TransactionDao'
+1657525382156	Rename type 'UserDao'
+1657526393011	Delete element
+1657526400128	Delete element
+1657526842105	Delete element
+1657526846487	Delete element
+1657527196793	Delete element
+1657527928890	Rename package 'com.bank.globalExceptionHandler'

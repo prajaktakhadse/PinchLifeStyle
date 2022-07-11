@@ -1,0 +1,28 @@
+package com.bank.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bank.model.Bank;
+import com.bank.model.Transaction;
+import com.bank.repository.BankRepo;
+import com.bank.repository.TransactionRepo;
+@Service
+public class TransactionServiceImp implements TransactionService{
+
+	@Autowired
+	private TransactionRepo tDao; 
+	@Autowired
+	private BankRepo bDao;
+	@Override
+	public List<Transaction> getTransaction(String accNo) {
+		Bank u1=bDao.getById(accNo);
+		if(u1==null)
+			throw new NoClassDefFoundError("Account not available");
+		List<Transaction> list=tDao.findAllByAccountNo(accNo);
+		return list;
+	}
+
+}
